@@ -1,0 +1,290 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1F1F1F;
+  line-height: 1.6;
+  padding-top: 20px;
+}
+
+/* HEADER */
+header.navbar {
+  height: 80px; /* Altura fixa do header */
+  padding: 0;   /* Remove espaçamento interno */
+} 
+
+header .navbar-brand {
+  height: 100%;
+}
+
+header .navbar-brand img {
+  height: 150px; /* Altura da logo */
+  width: auto;
+  object-fit: contain; /* Ajusta a imagem sem distorcer */
+  user-select: none;
+}
+
+/* Cor de fundo do header */
+.bg-custom {
+  background-color: #1E90FF;
+}
+
+/* Links do header com cor branca */
+.nav-link.cor {
+  font-weight: 600;
+  font-size: 1rem;
+  color: whitesmoke;
+}
+
+.nav-link.cor:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Links de login com cor preta */
+.nav-link.cor-preto {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #111;
+}
+
+.nav-link.cor-preto:hover {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+/* Ajusta alinhamento da navbar */
+ul.navbar-nav {
+  margin-left: auto;
+}
+
+/* CARROSSEL DE NOTÍCIAS EM DESTAQUE */
+.carousel-item {
+  height: auto; /* Ajusta altura conforme conteúdo */
+}
+
+.carousel-item img {
+  object-fit: cover; /* Imagem cobre área sem distorcer */
+  transition: opacity 0.8s ease;
+}
+
+/* Legenda do carrossel */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* Container do carrossel centralizado e estilizado */
+#carouselDestaques {
+  margin: 0 auto; /* centralizar horizontalmente */
+  max-width: 1120px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+#carouselDestaques:hover {
+  transform: scale(1.03);
+}
+
+/* Imagens das notícias dentro de cards/listas */
+img.noticia-imagem {
+  width: 100%;
+  height: auto;
+  max-height: 200px; /* altura máxima opcional */
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Seção de notícias geral e política */
+#ultimas-noticias {
+  background-color: #1F1F1F;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: none; /* sem borda superior */
+  width: 60%;
+}
+
+/* Títulos das seções política e esportes */
+.titulo-politica,
+.titulo-esportes {
+  color: #ffffff; 
+  font-weight: 700;
+}
+
+/* Itens da lista de notícias */
+.list-group-item {
+  padding: 2rem;
+  gap: 1rem;
+  background-color: #1F1F1F;
+  border: none; /* Remove todas as bordas padrão */
+  border-bottom: 1px solid #555; /* Apenas borda inferior */
+  display: flex;
+  align-items: center;
+}
+
+.list-group-item img {
+  width: 320px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.list-group-item h5 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: #1E90FF;
+}
+
+.noticia-autor {
+  color: white;
+  font-size: 15px;
+}
+
+.list-group-item small.text-muted {
+  font-size: 0.95rem;
+  color: white !important;
+}
+
+/* Link das notícias com efeito hover */
+.list-group-item-action {
+  background-color: #1F1F1F;
+  color: #EAEAEA;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.list-group-item-action:hover,
+.list-group-item-action:focus {
+  background-color: #1E90FF;
+  color: white !important;
+  text-decoration: none;
+}
+
+/* Textos internos mudam para branco no hover/focus */
+.list-group-item-action:hover h5,
+.list-group-item-action:hover .noticia-autor,
+.list-group-item-action:hover small.text-muted {
+  color: white !important;
+}
+
+/* Seção geral de notícias */
+.secao-noticias {
+  background-color: #1F1F1F;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Título centralizado para seções */
+.secao-noticias h2 {
+  color: #1E90FF;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* Imagem das notícias dentro dos cards */
+.noticia-imagem {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Container para notícias gerais do 7º ao 12º */
+#noticias-gerais-next6 {
+  background-color: #1F1F1F;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+#noticias-gerais-next6 .card {
+  border-bottom: 1px solid #555;
+  border-radius: 0;
+  margin-bottom: 20px;
+  background-color: #1F1F1F;
+  color: #f0f0f0;
+}
+
+#noticias-gerais-next6 .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+#noticias-gerais-next6 .card-title {
+  color: #1E90FF;
+  font-weight: 600;
+}
+
+#noticias-gerais-next6 .btn-outline-primary {
+  color: #1E90FF;
+  border-color: #1E90FF;
+}
+
+#noticias-gerais-next6 .btn-outline-primary:hover {
+  background-color: #1E90FF;
+  color: white;
+  border-color: #1E90FF;
+}
+
+/* Leia mais das notícas expecificas*/
+.btn-leia-mais {
+  background-color: #1E90FF;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-leia-mais:hover {
+  background-color: #1a78d1;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Responsivo para telas menores que 768px */
+@media (max-width: 768px) {
+  .carousel-caption {
+    font-size: 0.9rem;
+  }
+
+  header .navbar-brand img {
+    height: 32px;
+  }
+
+  .carousel-item {
+    height: 450px;
+  }
+
+  .carousel-item img {
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+    transition: opacity 0.8s ease;
+  }
+
+  /* Ajustes para títulos e textos das notícias em mobile */
+  .list-group-item h5 {
+    font-size: 1.2rem;
+  }
+
+  .list-group-item p,
+  .list-group-item small {
+    font-size: 0.9rem;
+  }
+}

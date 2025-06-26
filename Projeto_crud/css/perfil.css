@@ -1,0 +1,73 @@
+/* Reset e base */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
+}
+ 
+/* Centralização e layout */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Box do perfil */
+.box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+/* Título */
+.box h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Informações do usuário */
+.box p {
+    margin: 10px 0;
+    color: #555;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Ações */
+.box a {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 20px;
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.box a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.btn-voltar {
+    display: inline-block;   
+    width: 60%; 
+    padding: 10px;
+    background-color: #007BFF;
+    color: white !important; 
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none !important;  
+    font-weight: bold;    
+}
+
+.btn-voltar:hover {
+    background-color: #0056b3;
+}
