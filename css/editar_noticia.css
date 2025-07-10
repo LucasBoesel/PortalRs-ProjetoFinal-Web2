@@ -1,0 +1,102 @@
+/* Reset e estilo base */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #1F1F1F; /* fundo escuro */
+    color: #EAEAEA; /* texto claro */
+}
+
+/* Centraliza o conteúdo */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
+    min-height: 100vh;
+}
+
+/* Caixa principal */
+.box {
+    background-color: #2C2C2C; /* fundo da box */
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    width: 500px;
+}
+
+/* Título */
+.box h1 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/* Labels */
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #CCCCCC;
+}
+
+/* Inputs e textarea */
+form input[type="text"],
+form input[type="date"],
+form input[type="file"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #EAEAEA;
+    background-color: #3A3A3A;
+}
+
+/* Campo desabilitado */
+input[disabled] {
+    background-color: #555;
+    color: #999;
+}
+
+/* Textarea */
+form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Botão de envio */
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #1a78d1;
+}
+
+/* Mensagens */
+.message {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.message.error {
+    color: #e74c3c;
+}
+
+.message.success {
+    color: #2ecc71;
+}

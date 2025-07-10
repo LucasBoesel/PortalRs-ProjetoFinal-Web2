@@ -1,0 +1,532 @@
+/* INDEX */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    line-height: 1.6;
+    padding-top: 20px;
+    color: #222;
+}
+
+/* HEADER */
+header.navbar {
+    height: 80px;
+    padding: 0;
+    z-index: 2;
+}
+
+header .navbar-brand {
+    height: 100%;
+}
+
+header .navbar-brand img {
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+    user-select: none;
+}
+
+.bg-custom {
+    background-color: #1E90FF;
+}
+
+/* Links */
+.nav-link.cor {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.nav-link.cor:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-link.cor-preto {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #111;
+}
+
+.nav-link.cor-preto:hover {
+    color: #1E90FF;
+    text-decoration: none;
+}
+
+ul.navbar-nav {
+    margin-left: auto;
+}
+
+/* SWITCH */
+.form-check.form-switch.mb-0 {
+    margin-bottom: 0;
+}
+
+/* ANÚNCIOS */
+.anuncios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.anuncios .card {
+    width: 85%;
+    border-radius: 12px;
+    border: none;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    background-color: #ffffff;
+    color: #111;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.anuncios .card:hover {
+    transform: translateY(-8px);
+}
+
+.anuncios .card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.anuncios .card-body {
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.anuncios .card.destaque {
+    outline: 2px solid #1E90FF;
+    outline-offset: -2px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1024px) {
+    .anuncios .card {
+        flex-direction: column;
+        height: auto;
+        width: 95vw;
+    }
+
+    .anuncios .card img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .anuncios .card .card-content {
+        width: 100%;
+        padding: 1rem 1.5rem 2rem;
+    }
+
+    .anuncios .card .card-content p {
+        font-size: 1.2rem;
+    }
+}
+
+/* CARROSSEL */
+.carousel-item {
+    height: auto;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    transition: opacity 0.8s ease;
+}
+
+.carousel-caption {
+    background: rgba(200, 200, 200, 0.70) !important;
+    color: #222;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#carouselDestaques {
+    margin: 0 auto;
+    max-width: 1120px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+#carouselDestaques:hover {
+    transform: scale(1.03);
+}
+
+.destaque-btn {
+    background-color: #1E90FF;
+    color: white;
+}
+
+.destaque-btn:hover {
+    background-color: #1a78d1;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* BUSCA */
+.btn-buscar {
+    background-color: #005baf;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-buscar:hover {
+    background-color: #004a95;
+    color: white;
+}
+
+/* BOTÃO FLUTUANTE */
+.btn-clima-flutuante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-clima-flutuante:hover {
+    background-color: #1a78d1;
+}
+
+/* PAINEL CLIMA */
+.painel-clima {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 350px;
+    height: 100%;
+    background-color: #ffffff;
+    color: #222;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    transition: right 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.painel-clima.aberto {
+    right: 0;
+}
+
+.painel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+.btn-fechar {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.painel-conteudo {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.weather-box {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.weather-box img {
+    width: 60px;
+    height: 60px;
+    margin: 10px 0;
+}
+
+/* LISTAGEM DE NOTÍCIAS */
+#ultimas-noticias {
+    background-color: #fff;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 60%;
+}
+
+.titulo-politica,
+.titulo-esportes {
+    color: #333;
+    font-weight: 700;
+}
+
+.list-group-item,
+.list-group-item-anuncio {
+    padding: 2rem;
+    gap: 1rem;
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+}
+
+.list-group-item img,
+.list-group-item-anuncio img {
+    width: 320px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.list-group-item h5 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: #1E90FF;
+}
+
+.noticia-autor {
+    color: #333;
+    font-size: 15px;
+}
+
+.list-group-item small.text-muted,
+.list-group-item-anuncio small.text-muted {
+    font-size: 0.95rem;
+    color: #666 !important;
+}
+
+.list-group-item-action {
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.list-group-item-action:hover,
+.list-group-item-action:focus,
+.list-group-item-anuncio:hover,
+.list-group-item-anuncio:focus {
+    background-color: #1E90FF;
+    color: white !important;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.list-group-item-action:hover h5,
+.list-group-item-action:hover .noticia-autor,
+.list-group-item-action:hover small.text-muted,
+.list-group-item-anuncio:hover h5,
+.list-group-item-anuncio:hover .noticia-autor,
+.list-group-item-anuncio:hover small.text-muted {
+    color: white !important;
+}
+
+/* SEÇÃO NOTÍCIAS */
+.secao-noticias,
+#noticias-gerais-next6 {
+    background-color: #fff;
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.secao-noticias h2 {
+    color: #1E90FF;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.noticia-imagem {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#noticias-gerais-next6 .card {
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    margin-bottom: 20px;
+    background-color: #fff;
+    color: #111;
+}
+
+#noticias-gerais-next6 .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+#noticias-gerais-next6 .card-title {
+    color: #1E90FF;
+    font-weight: 600;
+}
+
+#noticias-gerais-next6 .btn-outline-primary {
+    color: #1E90FF;
+    border-color: #1E90FF;
+}
+
+#noticias-gerais-next6 .btn-outline-primary:hover {
+    background-color: #1E90FF;
+    color: white;
+    border-color: #1E90FF;
+}
+
+.list-group-item-anuncio .noticia-autor {
+    color: #222;
+    font-size: 1.6rem;
+  }
+
+  .list-group-item-anuncio h5 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: #444;
+  }
+  
+
+/* Botão Leia Mais */
+.btn-leia-mais {
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-leia-mais:hover {
+    background-color: #1a78d1;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Pop Up*/
+  .popup-anuncio {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    z-index: 1000;
+    width: 260px;
+    max-width: 90vw;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    animation: fadeInUp 0.5s ease;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+
+  /* Animação de entrada */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .popup-anuncio img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    object-fit: cover;
+  }
+
+  .popup-anuncio p {
+    font-size: 14px;
+    margin: 0 0 10px;
+    color: #222;
+  }
+
+  .popup-anuncio a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .popup-anuncio button {
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    float: right;
+    transition: background-color 0.2s ease;
+  }
+
+  .popup-anuncio button:hover {
+    background-color: #c0392b;
+  }
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .carousel-caption {
+        font-size: 0.9rem;
+    }
+
+    header .navbar-brand img {
+        height: 32px;
+    }
+
+    .carousel-item {
+        height: 450px;
+    }
+
+    .carousel-item img {
+        height: 450px;
+        width: 100%;
+        object-fit: cover;
+        transition: opacity 0.8s ease;
+    }
+
+    .list-group-item h5 {
+        font-size: 1.2rem;
+    }
+
+    .list-group-item p,
+    .list-group-item small {
+        font-size: 0.9rem;
+    }
+}

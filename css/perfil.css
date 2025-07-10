@@ -1,0 +1,74 @@
+/* Reset e base */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #1F1F1F; /* fundo escuro */
+    color: #EAEAEA; /* texto claro */
+    text-align: center;
+}
+
+/* Centralização e layout */ 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Box do perfil */
+.box {
+    background-color: #2C2C2C; /* fundo da caixa */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    width: 400px;
+}
+
+/* Título */
+.box h1 {
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+}
+
+/* Informações do usuário */
+.box p {
+    margin: 10px 0;
+    color: #CCCCCC;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Ações */
+.box a {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 20px;
+    color: #1E90FF;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.box a:hover {
+    text-decoration: underline;
+    color: #1a78d1;
+}
+
+.btn-voltar {
+    display: inline-block;   
+    width: 60%; 
+    padding: 10px;
+    background-color: #1E90FF;
+    color: white !important; 
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none !important;  
+    font-weight: bold;    
+}
+
+.btn-voltar:hover {
+    background-color: #1a78d1;
+}

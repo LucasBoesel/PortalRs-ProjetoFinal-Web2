@@ -1,0 +1,165 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #1F1F1F; /* fundo escuro */
+    color: #EAEAEA; /* texto claro */
+}
+
+/* Centraliza o conteúdo */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
+    min-height: 100vh;
+}
+
+/* Caixa principal */
+.box {
+    background-color: #2C2C2C; /* fundo da box */
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    width: 500px;
+}
+
+/* Título */
+.box h1 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/* Labels */
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #CCCCCC;
+}
+
+/* Inputs e textarea */
+form input[type="text"],
+form input[type="url"],
+form input[type="file"],
+form input[type="number"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #EAEAEA;
+    background-color: #3A3A3A;
+}
+
+/* Textarea */
+form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Checkbox label */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    color: #CCCCCC;
+    font-weight: normal;
+}
+
+/* Checkbox input custom */
+form input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #1E90FF; /* cor do checkbox (suporte moderno) */
+}
+
+/* Fallback para navegadores antigos (se quiser customizar checkbox mais) */
+/* Você pode usar um pseudo-elemento para criar checkbox customizado, mas aqui mantive simples */
+
+/* Botão de envio */
+form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #1a78d1;
+}
+
+/* Imagem atual */
+img {
+    border-radius: 6px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Mensagens de erro/sucesso */
+.message {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.message.error {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.message.success {
+    background-color: #2ecc71;
+    color: white;
+}
+
+/* Links dentro do texto do anúncio, se houver */
+form textarea a {
+    color: #1E90FF;
+    text-decoration: underline;
+}
+
+form textarea a:hover {
+    color: #1a78d1;
+}
+
+/* Pequeno ajuste para o input file para ficar mais bonito */
+form input[type="file"] {
+    cursor: pointer;
+    background-color: #3A3A3A;
+    color: #EAEAEA;
+    border: 1px solid #444;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+/* Placeholder (se usar em inputs) */
+::placeholder {
+    color: #999;
+}
+
+/* Foco dos campos para melhor UX */
+form input[type="text"]:focus,
+form input[type="url"]:focus,
+form input[type="file"]:focus,
+form input[type="number"]:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #1E90FF;
+    box-shadow: 0 0 5px #1E90FF;
+}

@@ -1,0 +1,114 @@
+ body {
+     font-family: Arial, sans-serif;
+     background-color: #f8f9fa;
+     margin: 30px;
+ }
+
+ .container {
+     max-width: 450px;
+     margin: 0 auto;
+     background: white;
+     padding: 25px 30px;
+     border-radius: 8px;
+     box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+ }
+
+ h1 {
+     text-align: center;
+     margin-bottom: 20px;
+     color: #212529;
+ }
+
+ label {
+     display: block;
+     margin-bottom: 6px;
+     color: #495057;
+     font-weight: 600;
+ }
+
+ input[type="text"],
+ input[type="date"],
+ textarea,
+ select {
+     color: black;
+     /* Cor do texto preta para contraste */
+     background-color: white;
+     /* Fundo branco */
+     width: 100%;
+     padding: 9px 12px;
+     margin-bottom: 20px;
+     border-radius: 6px;
+     border: 1.5px solid #ced4da;
+     font-size: 16px;
+     box-sizing: border-box;
+     font-family: inherit;
+     transition: border-color 0.3s ease;
+ }
+
+ form input[type="text"],
+ form input[type="email"] {
+     color: black; /* Cor do texto preta para contraste */
+     background-color: white; /* Fundo branco */
+     width: 100%;
+     padding: 9px 12px;
+     margin-bottom: 20px;
+     border-radius: 6px;
+     border: 1.5px solid #ced4da;
+     font-size: 16px;
+     box-sizing: border-box;
+     font-family: inherit;
+     transition: border-color 0.3s ease;
+ }
+ 
+ /* Estilo ao focar */
+ form input[type="text"]:focus,
+ form input[type="email"]:focus {
+     color: #EAEAEA;
+     border-color: #0d6efd; /* Borda azul no foco */
+     outline: none;
+ }
+
+ textarea {
+     resize: vertical;
+     min-height: 120px;
+     font-family: inherit;
+ }
+
+ .message {
+     text-align: center;
+     margin-bottom: 15px;
+     font-weight: 600;
+ }
+
+ .error {
+     color: #dc3545;
+ }
+
+ .success {
+     color: #198754;
+ }
+
+ input[type="submit"],
+ button.voltar {
+     width: 100%;
+     background-color: #0d6efd;
+     color: white;
+     border: none;
+     font-size: 17px;
+     font-weight: 700;
+     padding: 12px 0;
+     border-radius: 7px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+     margin-top: 5px;
+ }
+
+ input[type="submit"]:hover,
+ button.voltar:hover {
+     background-color: #0843c8;
+ }
+
+ /* Container para alinhar o select do tema */
+ .tema-container {
+     margin-bottom: 20px;
+ }

@@ -1,0 +1,93 @@
+/* Reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #1F1F1F; /* fundo escuro */
+    color: #EAEAEA; /* texto padrão claro */
+}
+
+/* Centraliza o conteúdo da página */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo do box de login */
+.box {
+    background-color: #2C2C2C; /* fundo da caixa escuro */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    width: 320px;
+    text-align: center;
+}
+
+/* Título */
+.box h1 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+/* Labels e inputs */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left; 
+    color: #CCCCCC;
+}
+
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #444; /* borda mais escura */
+    box-sizing: border-box;
+    background-color: #3A3A3A; /* fundo dos inputs */
+    color: #EAEAEA;
+}
+
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    border-color: #1E90FF;
+    outline: none;
+    background-color: #3A3A3A;
+    color: white;
+}
+
+/* Botão de login */
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #1a78d1;
+}
+
+/* Link de registro */
+.box p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #CCCCCC;
+}
+
+.box a {
+    color: #1E90FF;
+    text-decoration: none;
+}
+
+.box a:hover {
+    text-decoration: underline;
+    color: #1a78d1;
+}
